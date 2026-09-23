@@ -1,0 +1,14 @@
+# Visual Studio temporary files
+.vs/
+.idea/
+*.user
+*.suo
+
+# Build outputs
+bin/
+obj/
+out/
+
+# Database files
+*.db
+*.sqlite

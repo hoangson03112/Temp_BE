@@ -1,0 +1,51 @@
+﻿using NetCore.Oracle.DataAccess;
+using Temp_BE.Application.Interface.Repositories;
+using Temp_BE.Base.Databases;
+using Temp_BE.Infrastructure.Persistence.DbMappings;
+
+namespace Temp_BE.Infrastructure.Persistence.Repositories
+{
+    public class AuthRepository : IAuthRepository
+    {
+        private readonly IDbSession<DbQLBH> _db;
+
+        public AuthRepository(IDbSession<DbQLBH> db)
+        {
+            _db = db;
+        }
+
+        public async Task<UserDb?> GetByUserNameOrEmailAsync(string identifier)
+        {
+            return await _db.FirstOrDefaultAsync<UserDb>(
+                from u in _db.GetAll<UserDb>()
+                where u.UserName == identifier || u.Email == identifier
+                select u
+            );
+        }
+
+        public async Task<UserDb?> GetByIdAsync(long id)
+        {
+            return await _db.FirstOrDefaultAsync<UserDb>(
+                from u in _db.GetAll<UserDb>()
+                where u.Id == id
+                select u
+            );
+        }
+
+        public async Task<bool> ExistsByUserNameOrEmailAsync(string userName, string email)
+        {
+            var res = await _db.ToListAsync((
+                from u in _db.GetAll<UserDb>()
+                where u.UserName == userName || u.Email == email
+                select u.Id
+            ).Take(1));
+            return res.Count > 0;
+        }
+
+        public async Task<UserDb> CreateAsync(UserDb user)
+        {
+            await _db.InsertAsync(user);
+            return user;
+        }
+    }
+}

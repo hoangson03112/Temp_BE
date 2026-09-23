@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Temp-BE.Application",
+    "\\Temp-BE.Application\\Interface",
+    "\\Temp-BE.Infrastructure",
+    "\\Temp-BE.Infrastructure\\Persistence",
+    "\\Temp-BE.Infrastructure\\Persistence\\DbMappings",
+    "\\Temp-BE.Infrastructure\\Persistence\\Repositories"
+  ],
+  "SelectedNode": "\\Temp-BE.slnx",
+  "PreviewInSolutionExplorer": false
+}

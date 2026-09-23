@@ -1,0 +1,13 @@
+D:\PROJECT\Temp-BE\Temp-BE.Domain\bin\Debug\net8.0\Temp-BE.Domain.deps.json
+D:\PROJECT\Temp-BE\Temp-BE.Domain\bin\Debug\net8.0\Temp-BE.Domain.dll
+D:\PROJECT\Temp-BE\Temp-BE.Domain\bin\Debug\net8.0\Temp-BE.Domain.pdb
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.AssemblyInfoInputs.cache
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.AssemblyInfo.cs
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.csproj.CoreCompileInputs.cache
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.dll
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\refint\Temp-BE.Domain.dll
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.pdb
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\ref\Temp-BE.Domain.dll
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE.Domain.csproj.AssemblyReference.cache
+D:\PROJECT\Temp-BE\Temp-BE.Domain\obj\Debug\net8.0\Temp-BE..F839D5EB.Up2Date

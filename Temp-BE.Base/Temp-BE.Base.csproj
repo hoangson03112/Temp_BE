@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Temp_BE.Base</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetCore.Oracle.DataAccess" Version="26.9.4" />
+    <PackageReference Include="NetCore.Utilities.Core" Version="26.4.2" />
+  </ItemGroup>
+
+</Project>

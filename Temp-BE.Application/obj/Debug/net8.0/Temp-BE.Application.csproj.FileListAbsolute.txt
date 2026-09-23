@@ -1,0 +1,17 @@
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.csproj.AssemblyReference.cache
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.AssemblyInfoInputs.cache
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.AssemblyInfo.cs
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.csproj.CoreCompileInputs.cache
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Application.deps.json
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Application.dll
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Application.pdb
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Base.dll
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Domain.dll
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Domain.pdb
+D:\PROJECT\Temp-BE\Temp-BE.Application\bin\Debug\net8.0\Temp-BE.Base.pdb
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE..74843726.Up2Date
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.dll
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\refint\Temp-BE.Application.dll
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.pdb
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\ref\Temp-BE.Application.dll
