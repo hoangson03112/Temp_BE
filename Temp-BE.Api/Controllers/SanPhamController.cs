@@ -17,9 +17,9 @@ namespace Temp_BE.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetPagedList([FromQuery] SanPhamFilterRequest request)
         {
-            var result = await _sanPhamService.GetAllAsync();
+            var result = await _sanPhamService.GetPagedListAsync(request);
             return HandleResult(result);
         }
 

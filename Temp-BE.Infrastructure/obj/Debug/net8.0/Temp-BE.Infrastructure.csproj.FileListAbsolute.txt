@@ -17,3 +17,4 @@ D:\PROJECT\Temp-BE\Temp-BE.Infrastructure\obj\Debug\net8.0\Temp-BE.Infrastructur
 D:\PROJECT\Temp-BE\Temp-BE.Infrastructure\obj\Debug\net8.0\refint\Temp-BE.Infrastructure.dll
 D:\PROJECT\Temp-BE\Temp-BE.Infrastructure\obj\Debug\net8.0\Temp-BE.Infrastructure.pdb
 D:\PROJECT\Temp-BE\Temp-BE.Infrastructure\obj\Debug\net8.0\ref\Temp-BE.Infrastructure.dll
+D:\PROJECT\Temp-BE\Temp-BE.Infrastructure\obj\Debug\net8.0\Temp-BE.Infrastructure.sourcelink.json

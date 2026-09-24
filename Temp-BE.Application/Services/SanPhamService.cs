@@ -1,5 +1,6 @@
 ﻿using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Application.Interface.Services;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.DTOs;
 
 namespace Temp_BE.Application.Services
@@ -11,10 +12,10 @@ namespace Temp_BE.Application.Services
         {
             _sanPhamRepo = sanPhamRepo;
         }
-        public async Task<ApiResponse<List<SanPhamDto>>> GetAllAsync()
+        public async Task<ApiResponse<PagedResult<SanPhamDto>>> GetPagedListAsync(SanPhamFilterRequest request)
         {
-            var data = await _sanPhamRepo.GetAllAsync();
-            return ApiResponse<List<SanPhamDto>>.Ok(data, "Lấy danh sách sản phẩm thành công.");
+            var pagedResult = await _sanPhamRepo.GetPagedListAsync(request);
+            return ApiResponse<PagedResult<SanPhamDto>>.Ok(pagedResult, "Lấy danh sách sản phẩm thành công.");
         }
         public async Task<ApiResponse<SanPhamDto>> GetByMaSpAsync(string maSp)
         {

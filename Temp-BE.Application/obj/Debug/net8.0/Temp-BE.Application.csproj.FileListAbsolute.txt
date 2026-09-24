@@ -15,3 +15,4 @@ D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.dll
 D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\refint\Temp-BE.Application.dll
 D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.pdb
 D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\ref\Temp-BE.Application.dll
+D:\PROJECT\Temp-BE\Temp-BE.Application\obj\Debug\net8.0\Temp-BE.Application.sourcelink.json

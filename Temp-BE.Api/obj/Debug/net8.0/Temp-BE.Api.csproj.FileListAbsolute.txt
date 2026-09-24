@@ -81,3 +81,4 @@ D:\PROJECT\Temp-BE\Temp-BE.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.
 D:\PROJECT\Temp-BE\Temp-BE.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\PROJECT\Temp-BE\Temp-BE.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\PROJECT\Temp-BE\Temp-BE.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\PROJECT\Temp-BE\Temp-BE.Api\obj\Debug\net8.0\Temp-BE.Api.sourcelink.json

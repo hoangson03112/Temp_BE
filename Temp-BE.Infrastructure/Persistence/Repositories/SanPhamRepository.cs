@@ -1,6 +1,7 @@
 using NetCore.Oracle.DataAccess;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Base.Databases;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.DTOs;
 using Temp_BE.Infrastructure.Persistence.DbMappings;
 
@@ -15,10 +16,31 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
             _db = db;
         }
 
-        public async Task<List<SanPhamDto>> GetAllAsync()
+        public async Task<PagedResult<SanPhamDto>> GetPagedListAsync(SanPhamFilterRequest request)
         {
-            return await _db.ToListAsync<SanPhamDto>(
-                from a in _db.GetAll<SanPhamDb>()
+            var query = from a in _db.GetAll<SanPhamDb>() select a;
+
+            if (!string.IsNullOrWhiteSpace(request.Keyword))
+            {
+                var keyword = request.Keyword.Trim().ToUpper();
+                query = query.Where(x => x.TenSp.ToUpper().Contains(keyword) || x.MaSp.ToUpper().Contains(keyword));
+            }
+            if (request.MinPrice.HasValue)
+            {
+                query = query.Where(x => x.GiaBan >= request.MinPrice.Value);
+            }
+            if (request.MaxPrice.HasValue)
+            {
+                query = query.Where(x => x.GiaBan <= request.MaxPrice.Value);
+            }
+
+            if (request.TrangThai.HasValue)
+            {
+                query = query.Where(x => x.TrangThai == request.TrangThai.Value);
+            }
+
+            var allItems = await _db.ToListAsync<SanPhamDto>(
+                from a in query
                 select new
                 {
                     MaSp = a.MaSp,
@@ -29,6 +51,32 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 },
                 isMapping: false
             );
+
+            if (!string.IsNullOrWhiteSpace(request.SortBy) && request.SortBy.Equals("GiaBan", StringComparison.OrdinalIgnoreCase))
+            {
+                allItems = request.IsAscending
+                    ? allItems.OrderBy(x => x.GiaBan).ToList()
+                    : allItems.OrderByDescending(x => x.GiaBan).ToList();
+            }
+            else if (!string.IsNullOrWhiteSpace(request.SortBy) && request.SortBy.Equals("TenSp", StringComparison.OrdinalIgnoreCase))
+            {
+                allItems = request.IsAscending
+                    ? allItems.OrderBy(x => x.TenSp).ToList()
+                    : allItems.OrderByDescending(x => x.TenSp).ToList();
+            }
+            else
+            {
+                allItems = request.IsAscending
+                    ? allItems.OrderBy(x => x.MaSp).ToList()
+                    : allItems.OrderByDescending(x => x.MaSp).ToList();
+            }
+
+            int totalCount = allItems.Count;
+
+            int skip = (request.PageIndex - 1) * request.PageSize;
+            var pagedItems = allItems.Skip(skip).Take(request.PageSize).ToList();
+
+            return new PagedResult<SanPhamDto>(pagedItems, totalCount, request.PageIndex, request.PageSize);
         }
 
         public async Task<SanPhamDto?> GetByMaSpAsync(string maSp)

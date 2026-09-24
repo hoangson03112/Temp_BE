@@ -16,6 +16,7 @@ namespace Temp_BE.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create([FromBody] CreateDonHangDto dto)
         {
             var userId = long.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
@@ -23,6 +24,7 @@ namespace Temp_BE.Api.Controllers
             return HandleResult(result);
         }
         [HttpGet("my-orders")]
+        [Authorize]
         public async Task<IActionResult> GetMyOrders()
         {
             var userId = long.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
@@ -30,12 +32,14 @@ namespace Temp_BE.Api.Controllers
             return HandleResult(result);
         }
         [HttpGet("{maDh}")]
+        [Authorize]
         public async Task<IActionResult> GetById(string maDh)
         {
             var result = await _donHangService.GetOrderByIdAsync(maDh);
             return HandleResult(result);
         }
         [Authorize(Roles = "Admin")]
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int? status)
         {
@@ -43,6 +47,7 @@ namespace Temp_BE.Api.Controllers
             return HandleResult(result);
         }
         [Authorize(Roles = "Admin")]
+        [Authorize]
         [HttpPut("{maDh}/status")]
         public async Task<IActionResult> UpdateStatus(string maDh, [FromBody] UpdateOrderStatusDto dto)
         {
