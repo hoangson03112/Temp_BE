@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Temp_BE.Application.Interface.Services;
-using Temp_BE.Domain.DTOs;
+using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
 {
@@ -22,16 +22,16 @@ namespace Temp_BE.Api.Controllers
 
         [Authorize]
         [HttpPost("{maSp}")]
-        public async Task<IActionResult> CreateDanhGia(string maSp, [FromBody] CreateDanhGiaDto dto)
+        public async Task<IActionResult> CreateDanhGia(string maSp, [FromBody] CreateDanhGiaRequest req)
         {
-            var result = await _danhGiaService.CreateAsync(maSp, dto);
+            var result = await _danhGiaService.CreateAsync(maSp, req);
             return HandleResult(result);
 
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateDanhGia(long id, UpdateDanhGiaDto dto)
+        public async Task<IActionResult> UpdateDanhGia(long id, [FromBody] UpdateDanhGiaRequest req)
         {
-            var result = await _danhGiaService.UpdateAsync(id, dto);
+            var result = await _danhGiaService.UpdateAsync(id, req);
             return HandleResult(result);
         }
         [HttpDelete("{id}")]

@@ -1,7 +1,4 @@
 <Solution>
   <Project Path="Temp-BE.Api/Temp-BE.Api.csproj" />
-  <Project Path="Temp-BE.Application/Temp-BE.Application.csproj" />
   <Project Path="Temp-BE.Base/Temp-BE.Base.csproj" />
-  <Project Path="Temp-BE.Domain/Temp-BE.Domain.csproj" />
-  <Project Path="Temp-BE.Infrastructure/Temp-BE.Infrastructure.csproj" />
 </Solution>

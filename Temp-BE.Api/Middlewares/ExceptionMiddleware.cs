@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using System.Text.Json;
-using Temp_BE.Domain.DTOs;
+using Temp_BE.Application.Common;
 
 namespace Temp_BE.Api.Middlewares
 {

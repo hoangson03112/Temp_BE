@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.LoginDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.LoginRequest",
         "IsRequired": true
       }
     ],
@@ -44,8 +44,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.RegisterDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.RegisterRequest",
         "IsRequired": true
       }
     ],
@@ -65,8 +65,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.UpdateDanhGiaDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.UpdateDanhGiaRequest",
         "IsRequired": true
       }
     ],
@@ -118,8 +118,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.CreateDanhGiaDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.CreateDanhGiaRequest",
         "IsRequired": true
       }
     ],
@@ -144,8 +144,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.CreateDanhMucDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.CreateDanhMucRequest",
         "IsRequired": true
       }
     ],
@@ -181,8 +181,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.UpdateDanhMucDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.UpdateDanhMucRequest",
         "IsRequired": true
       }
     ],
@@ -213,8 +213,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.CreateDonHangDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.CreateDonHangRequest",
         "IsRequired": true
       }
     ],
@@ -266,8 +266,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.UpdateOrderStatusDto",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.UpdateOrderStatusRequest",
         "IsRequired": true
       }
     ],
@@ -307,16 +307,6 @@
         "IsRequired": false
       },
       {
-        "Name": "PageIndex",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
         "Name": "Keyword",
         "Type": "System.String",
         "IsRequired": false
@@ -329,6 +319,16 @@
       {
         "Name": "IsAscending",
         "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -343,34 +343,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.CreateSanPhamDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Temp_BE.Api.Controllers.SanPhamController",
-    "Method": "Update",
-    "RelativePath": "api/san-pham/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "maSp",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "dto",
-        "Type": "Temp_BE.Domain.DTOs.UpdateSanPhamDto",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "",
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.CreateSanPhamRequest",
         "IsRequired": true
       }
     ],
@@ -387,6 +361,27 @@
       {
         "Name": "maSp",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Temp_BE.Api.Controllers.SanPhamController",
+    "Method": "Update",
+    "RelativePath": "api/san-pham/{maSp}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maSp",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "Temp_BE.Domain.Requests.UpdateSanPhamRequest",
         "IsRequired": true
       }
     ],

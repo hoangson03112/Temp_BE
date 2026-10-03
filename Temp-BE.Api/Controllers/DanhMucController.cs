@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Temp_BE.Application.Interface.Services;
-using Temp_BE.Domain.DTOs;
+using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
 {
@@ -26,15 +26,15 @@ namespace Temp_BE.Api.Controllers
             return HandleResult(result);
         }
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody] CreateDanhMucDto dto)
+        public async Task<IActionResult> CreateAsync([FromBody] CreateDanhMucRequest req)
         {
-            var result = await _danhMucService.CreateAsync(dto);
+            var result = await _danhMucService.CreateAsync(req);
             return HandleResult(result);
         }
         [HttpPut("{maDm}")]
-        public async Task<IActionResult> Update(string maDm, [FromBody] UpdateDanhMucDto dto)
+        public async Task<IActionResult> Update(string maDm, [FromBody] UpdateDanhMucRequest req)
         {
-            var result = await _danhMucService.UpdateAsync(maDm, dto);
+            var result = await _danhMucService.UpdateAsync(maDm, req);
             return HandleResult(result);
         }
         [HttpDelete("{maDm}")]

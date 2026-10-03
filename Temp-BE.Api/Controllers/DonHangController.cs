@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Temp_BE.Application.Interface.Services;
-using Temp_BE.Domain.DTOs;
+using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
 {
@@ -17,10 +17,10 @@ namespace Temp_BE.Api.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create([FromBody] CreateDonHangDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateDonHangRequest req)
         {
             var userId = long.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-            var result = await _donHangService.CreateOrderAsync(userId, dto);
+            var result = await _donHangService.CreateOrderAsync(userId, req);
             return HandleResult(result);
         }
         [HttpGet("my-orders")]
@@ -39,7 +39,6 @@ namespace Temp_BE.Api.Controllers
             return HandleResult(result);
         }
         [Authorize(Roles = "Admin")]
-        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] int? status)
         {
@@ -47,11 +46,10 @@ namespace Temp_BE.Api.Controllers
             return HandleResult(result);
         }
         [Authorize(Roles = "Admin")]
-        [Authorize]
         [HttpPut("{maDh}/status")]
-        public async Task<IActionResult> UpdateStatus(string maDh, [FromBody] UpdateOrderStatusDto dto)
+        public async Task<IActionResult> UpdateStatus(string maDh, [FromBody] UpdateOrderStatusRequest req)
         {
-            var result = await _donHangService.UpdateStatusAsync(maDh, dto.TrangThai);
+            var result = await _donHangService.UpdateStatusAsync(maDh, req.TrangThai);
             return HandleResult(result);
         }
     }

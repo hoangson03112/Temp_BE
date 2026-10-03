@@ -3,104 +3,112 @@
   "WorkspaceRootPath": "D:\\PROJECT\\Temp-BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\infrastructure\\persistence\\repositories\\sanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\infrastructure\\persistence\\repositories\\sanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\interface\\repositories\\idonhangrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\interface\\repositories\\idonhangrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\application\\interface\\repositories\\isanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\application\\interface\\repositories\\isanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0387C7FA-9682-23B3-42A6-202EEFFE6E0F}|Temp-BE.Infrastructure\\Temp-BE.Infrastructure.csproj|d:\\project\\temp-be\\temp-be.infrastructure\\persistence\\repositories\\sanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0387C7FA-9682-23B3-42A6-202EEFFE6E0F}|Temp-BE.Infrastructure\\Temp-BE.Infrastructure.csproj|solutionrelative:temp-be.infrastructure\\persistence\\repositories\\sanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\interface\\repositories\\isanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\interface\\repositories\\isanphamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\services\\sanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\services\\sanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\requests\\sanphamfilterrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\requests\\sanphamfilterrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\interface\\services\\isanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\interface\\services\\isanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\requests\\sanphamrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\requests\\sanphamrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|d:\\project\\temp-be\\temp-be.domain\\dtos\\sanphamfilterrequest .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|solutionrelative:temp-be.domain\\dtos\\sanphamfilterrequest .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\requests\\donhangrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\requests\\donhangrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\interface\\repositories\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\interface\\repositories\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\dtos\\sanphamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\dtos\\sanphamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\common\\pagedrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\common\\pagedrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|d:\\project\\temp-be\\temp-be.domain\\dtos\\sanphamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|solutionrelative:temp-be.domain\\dtos\\sanphamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\responses\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\responses\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|d:\\project\\temp-be\\temp-be.domain\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|solutionrelative:temp-be.domain\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\requests\\authrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\requests\\authrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|d:\\project\\temp-be\\temp-be.domain\\common\\pagedrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|solutionrelative:temp-be.domain\\common\\pagedrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\requests\\chitietdonhangrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\requests\\chitietdonhangrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|d:\\project\\temp-be\\temp-be.domain\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|solutionrelative:temp-be.domain\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\domain\\dtos\\chitietdonhangdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\domain\\dtos\\chitietdonhangdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|d:\\project\\temp-be\\temp-be.domain\\dtos\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60357FD8-3C15-AF9C-031A-07366D94B825}|Temp-BE.Domain\\Temp-BE.Domain.csproj|solutionrelative:temp-be.domain\\dtos\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBE49DB5-F482-3229-3BD5-7194B4118C17}|Temp-BE.Base\\Temp-BE.Base.csproj|d:\\project\\temp-be\\temp-be.base\\databases\\repositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBE49DB5-F482-3229-3BD5-7194B4118C17}|Temp-BE.Base\\Temp-BE.Base.csproj|solutionrelative:temp-be.base\\databases\\repositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\application\\services\\danhgiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\application\\services\\danhgiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0387C7FA-9682-23B3-42A6-202EEFFE6E0F}|Temp-BE.Infrastructure\\Temp-BE.Infrastructure.csproj|d:\\project\\temp-be\\temp-be.infrastructure\\infrastructuredependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0387C7FA-9682-23B3-42A6-202EEFFE6E0F}|Temp-BE.Infrastructure\\Temp-BE.Infrastructure.csproj|solutionrelative:temp-be.infrastructure\\infrastructuredependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\applicationdependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\interface\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\interface\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\controllers\\danhgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\controllers\\danhgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|d:\\project\\temp-be\\temp-be.application\\services\\danhmucservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E3F6E5-3635-0A66-8A6D-57DEEBCD7E80}|Temp-BE.Application\\Temp-BE.Application.csproj|solutionrelative:temp-be.application\\services\\danhmucservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0387C7FA-9682-23B3-42A6-202EEFFE6E0F}|Temp-BE.Infrastructure\\Temp-BE.Infrastructure.csproj|d:\\project\\temp-be\\temp-be.infrastructure\\persistence\\repositories\\danhmucrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0387C7FA-9682-23B3-42A6-202EEFFE6E0F}|Temp-BE.Infrastructure\\Temp-BE.Infrastructure.csproj|solutionrelative:temp-be.infrastructure\\persistence\\repositories\\danhmucrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\temp-be.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\temp-be.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\infrastructure\\infrastructuredependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\infrastructure\\infrastructuredependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\application\\services\\danhmucservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\application\\services\\danhmucservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\application\\services\\donhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\application\\services\\donhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|d:\\project\\temp-be\\temp-be.api\\application\\services\\sanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F49DB86B-16CA-5AED-F4A1-CAE3AE4738D3}|Temp-BE.Api\\Temp-BE.Api.csproj|solutionrelative:temp-be.api\\application\\services\\sanphamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,324 +118,339 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ISanPhamRepository.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Repositories\\ISanPhamRepository.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Interface\\Repositories\\ISanPhamRepository.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Repositories\\ISanPhamRepository.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Interface\\Repositories\\ISanPhamRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:08:35.835Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DonHangController.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\DonHangController.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\DonHangController.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\DonHangController.cs",
-              "RelativeToolTip": "Temp-BE.Api\\Controllers\\DonHangController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:22:38.316Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IDonHangRepository.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Repositories\\IDonHangRepository.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Interface\\Repositories\\IDonHangRepository.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Repositories\\IDonHangRepository.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Interface\\Repositories\\IDonHangRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ISanPhamRepository.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Interface\\Repositories\\ISanPhamRepository.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Application\\Interface\\Repositories\\ISanPhamRepository.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Interface\\Repositories\\ISanPhamRepository.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Application\\Interface\\Repositories\\ISanPhamRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:22:35.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SanPhamRepository.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
-              "RelativeToolTip": "Temp-BE.Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwAkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:12:14.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SanPhamFilterRequest .cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\SanPhamFilterRequest .cs",
-              "RelativeDocumentMoniker": "Temp-BE.Domain\\DTOs\\SanPhamFilterRequest .cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\SanPhamFilterRequest .cs",
-              "RelativeToolTip": "Temp-BE.Domain\\DTOs\\SanPhamFilterRequest .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:06:32.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SanPhamController.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\SanPhamController.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\SanPhamController.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\SanPhamController.cs",
-              "RelativeToolTip": "Temp-BE.Api\\Controllers\\SanPhamController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:44:37.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SanPhamService.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Services\\SanPhamService.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Services\\SanPhamService.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Services\\SanPhamService.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Services\\SanPhamService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:33:07.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ISanPhamService.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Services\\ISanPhamService.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Interface\\Services\\ISanPhamService.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Services\\ISanPhamService.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Interface\\Services\\ISanPhamService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:32:37.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAuthRepository.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Repositories\\IAuthRepository.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Interface\\Repositories\\IAuthRepository.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Repositories\\IAuthRepository.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Interface\\Repositories\\IAuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:33:43.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAcwA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:38:51.045Z",
+              "WhenOpened": "2026-10-03T09:59:32.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "SanPhamDto.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\SanPhamDto.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Domain\\DTOs\\SanPhamDto.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\SanPhamDto.cs",
-              "RelativeToolTip": "Temp-BE.Domain\\DTOs\\SanPhamDto.cs",
+              "Title": "AuthRequest.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\AuthRequest.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Requests\\AuthRequest.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\AuthRequest.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Requests\\AuthRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T03:49:49.544Z",
+              "WhenOpened": "2026-10-03T04:01:50.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SanPhamRequest.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\SanPhamRequest.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Requests\\SanPhamRequest.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\SanPhamRequest.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Requests\\SanPhamRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T04:01:47.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SanPhamFilterRequest.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\SanPhamFilterRequest.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Requests\\SanPhamFilterRequest.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\SanPhamFilterRequest.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Requests\\SanPhamFilterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T03:03:36.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Responses\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Responses\\AuthResponse.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Responses\\AuthResponse.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Responses\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T09:08:15.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SanPhamRepository.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Infrastructure\\Persistence\\Repositories\\SanPhamRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T09:19:53.081Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Common\\PagedResult.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Common\\PagedResult.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Common\\PagedResult.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Common\\PagedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T02:08:27.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\SanPhamController.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBQAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T02:58:52.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SanPhamDto.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\DTOs\\SanPhamDto.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\DTOs\\SanPhamDto.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\DTOs\\SanPhamDto.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\DTOs\\SanPhamDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T04:03:00.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DonHangRequest.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\DonHangRequest.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Requests\\DonHangRequest.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\DonHangRequest.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Requests\\DonHangRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T04:03:23.431Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "PagedResult.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\Common\\PagedResult.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Domain\\Common\\PagedResult.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\Common\\PagedResult.cs",
-              "RelativeToolTip": "Temp-BE.Domain\\Common\\PagedResult.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBAAAAAaAAAAAAAAAA==",
+              "Title": "ChiTietDonHangRequest.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\ChiTietDonHangRequest.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Requests\\ChiTietDonHangRequest.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Requests\\ChiTietDonHangRequest.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Requests\\ChiTietDonHangRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T02:01:48.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-03T04:01:49.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "PagedRequest.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\Common\\PagedRequest.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Domain\\Common\\PagedRequest.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\Common\\PagedRequest.cs",
-              "RelativeToolTip": "Temp-BE.Domain\\Common\\PagedRequest.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAAAwAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Common\\PagedRequest.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\Common\\PagedRequest.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\Common\\PagedRequest.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\Common\\PagedRequest.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T01:47:03.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthDto.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\AuthDto.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Domain\\DTOs\\AuthDto.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\AuthDto.cs",
-              "RelativeToolTip": "Temp-BE.Domain\\DTOs\\AuthDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T01:45:52.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-03T02:08:22.795Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "ApiResponse.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\ApiResponse.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Domain\\DTOs\\ApiResponse.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Domain\\DTOs\\ApiResponse.cs",
-              "RelativeToolTip": "Temp-BE.Domain\\DTOs\\ApiResponse.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAswCEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:41:40.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "InfrastructureDependencyInjection.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Infrastructure\\InfrastructureDependencyInjection.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Infrastructure\\InfrastructureDependencyInjection.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Infrastructure\\InfrastructureDependencyInjection.cs",
-              "RelativeToolTip": "Temp-BE.Infrastructure\\InfrastructureDependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:36:44.351Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "BaseApiController.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\BaseApiController.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\BaseApiController.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\BaseApiController.cs",
-              "RelativeToolTip": "Temp-BE.Api\\Controllers\\BaseApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:34:33.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DanhMucController.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\DanhMucController.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\DanhMucController.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\DanhMucController.cs",
-              "RelativeToolTip": "Temp-BE.Api\\Controllers\\DanhMucController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T07:44:40.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Repositories.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Base\\Databases\\Repositories.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Base\\Databases\\Repositories.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Base\\Databases\\Repositories.cs",
-              "RelativeToolTip": "Temp-BE.Base\\Databases\\Repositories.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:41:11.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ApplicationDependencyInjection.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\ApplicationDependencyInjection.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\ApplicationDependencyInjection.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\ApplicationDependencyInjection.cs",
-              "RelativeToolTip": "Temp-BE.Application\\ApplicationDependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:29:15.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Program.cs",
               "RelativeDocumentMoniker": "Temp-BE.Api\\Program.cs",
               "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Program.cs",
               "RelativeToolTip": "Temp-BE.Api\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAAEIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T08:21:34.589Z"
+              "WhenOpened": "2026-10-03T01:46:30.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Temp-BE.Api\\appsettings.json",
               "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\appsettings.json",
               "RelativeToolTip": "Temp-BE.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-23T08:21:33.09Z"
+              "WhenOpened": "2026-10-03T01:46:25.426Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Interface\\Services\\IAuthService.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Interface\\Services\\IAuthService.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Interface\\Services\\IAuthService.cs",
+              "DocumentIndex": 13,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Application\\Services\\AuthService.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:15:13.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChiTietDonHangDto.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\DTOs\\ChiTietDonHangDto.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Domain\\DTOs\\ChiTietDonHangDto.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Domain\\DTOs\\ChiTietDonHangDto.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Domain\\DTOs\\ChiTietDonHangDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:36:25.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:51:11.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAswDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:40:50.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseApiController.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\BaseApiController.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\BaseApiController.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\BaseApiController.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Controllers\\BaseApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T02:09:02.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DanhGiaService.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\DanhGiaService.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Application\\Services\\DanhGiaService.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\DanhGiaService.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Application\\Services\\DanhGiaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:24:49.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DanhGIaController.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\DanhGIaController.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Controllers\\DanhGIaController.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Controllers\\DanhGIaController.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Controllers\\DanhGIaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:33:28.989Z"
+              "WhenOpened": "2026-10-03T02:12:40.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\appsettings.Development.json",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\appsettings.Development.json",
+              "RelativeToolTip": "Temp-BE.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-02T09:42:36.631Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "DanhMucService.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Services\\DanhMucService.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Application\\Services\\DanhMucService.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Application\\Services\\DanhMucService.cs",
-              "RelativeToolTip": "Temp-BE.Application\\Services\\DanhMucService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwCQAAAAgAAAAAAAAAA==",
+              "Title": "InfrastructureDependencyInjection.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Infrastructure\\InfrastructureDependencyInjection.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Infrastructure\\InfrastructureDependencyInjection.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Infrastructure\\InfrastructureDependencyInjection.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Infrastructure\\InfrastructureDependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T07:41:01.19Z"
+              "WhenOpened": "2026-10-02T09:13:11.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Temp-BE.Api.csproj",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Temp-BE.Api.csproj",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Temp-BE.Api.csproj",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Temp-BE.Api.csproj",
+              "RelativeToolTip": "Temp-BE.Api\\Temp-BE.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-02T08:21:01.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DonHangService.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\DonHangService.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Application\\Services\\DonHangService.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\DonHangService.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Application\\Services\\DonHangService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwCUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:35:45.913Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "DanhMucRepository.cs",
-              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Infrastructure\\Persistence\\Repositories\\DanhMucRepository.cs",
-              "RelativeDocumentMoniker": "Temp-BE.Infrastructure\\Persistence\\Repositories\\DanhMucRepository.cs",
-              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Infrastructure\\Persistence\\Repositories\\DanhMucRepository.cs",
-              "RelativeToolTip": "Temp-BE.Infrastructure\\Persistence\\Repositories\\DanhMucRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEsAAAABAAAAAAAAAA==",
+              "Title": "DanhMucService.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\DanhMucService.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Application\\Services\\DanhMucService.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\DanhMucService.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Application\\Services\\DanhMucService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T07:19:19.492Z"
+              "WhenOpened": "2026-10-02T08:28:20.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SanPhamService.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\SanPhamService.cs",
+              "RelativeDocumentMoniker": "Temp-BE.Api\\Application\\Services\\SanPhamService.cs",
+              "ToolTip": "D:\\PROJECT\\Temp-BE\\Temp-BE.Api\\Application\\Services\\SanPhamService.cs",
+              "RelativeToolTip": "Temp-BE.Api\\Application\\Services\\SanPhamService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-02T08:34:58.232Z"
             }
           ]
         }

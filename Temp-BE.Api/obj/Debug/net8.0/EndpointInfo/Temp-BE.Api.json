@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/RegisterRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/RegisterRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/RegisterRequest"
               }
             }
           }
@@ -45,17 +45,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/LoginRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/LoginRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/LoginRequest"
               }
             }
           }
@@ -132,17 +132,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDanhGiaDto"
+                "$ref": "#/components/schemas/CreateDanhGiaRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDanhGiaDto"
+                "$ref": "#/components/schemas/CreateDanhGiaRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDanhGiaDto"
+                "$ref": "#/components/schemas/CreateDanhGiaRequest"
               }
             }
           }
@@ -175,17 +175,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDanhGiaDto"
+                "$ref": "#/components/schemas/UpdateDanhGiaRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDanhGiaDto"
+                "$ref": "#/components/schemas/UpdateDanhGiaRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDanhGiaDto"
+                "$ref": "#/components/schemas/UpdateDanhGiaRequest"
               }
             }
           }
@@ -238,17 +238,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDanhMucDto"
+                "$ref": "#/components/schemas/CreateDanhMucRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDanhMucDto"
+                "$ref": "#/components/schemas/CreateDanhMucRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDanhMucDto"
+                "$ref": "#/components/schemas/CreateDanhMucRequest"
               }
             }
           }
@@ -301,17 +301,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDanhMucDto"
+                "$ref": "#/components/schemas/UpdateDanhMucRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDanhMucDto"
+                "$ref": "#/components/schemas/UpdateDanhMucRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateDanhMucDto"
+                "$ref": "#/components/schemas/UpdateDanhMucRequest"
               }
             }
           }
@@ -353,17 +353,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDonHangDto"
+                "$ref": "#/components/schemas/CreateDonHangRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDonHangDto"
+                "$ref": "#/components/schemas/CreateDonHangRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateDonHangDto"
+                "$ref": "#/components/schemas/CreateDonHangRequest"
               }
             }
           }
@@ -451,17 +451,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateOrderStatusDto"
+                "$ref": "#/components/schemas/UpdateOrderStatusRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateOrderStatusDto"
+                "$ref": "#/components/schemas/UpdateOrderStatusRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateOrderStatusDto"
+                "$ref": "#/components/schemas/UpdateOrderStatusRequest"
               }
             }
           }
@@ -507,24 +507,6 @@
             }
           },
           {
-            "name": "PageIndex",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "PageSize",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
             "name": "Keyword",
             "in": "query",
             "style": "form",
@@ -547,6 +529,24 @@
             "schema": {
               "type": "boolean"
             }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {
@@ -563,17 +563,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateSanPhamDto"
+                "$ref": "#/components/schemas/CreateSanPhamRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateSanPhamDto"
+                "$ref": "#/components/schemas/CreateSanPhamRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateSanPhamDto"
+                "$ref": "#/components/schemas/CreateSanPhamRequest"
               }
             }
           }
@@ -607,6 +607,46 @@
           }
         }
       },
+      "put": {
+        "tags": [
+          "SanPham"
+        ],
+        "parameters": [
+          {
+            "name": "maSp",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSanPhamRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSanPhamRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSanPhamRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "SanPham"
@@ -628,61 +668,11 @@
           }
         }
       }
-    },
-    "/api/san-pham/{id}": {
-      "put": {
-        "tags": [
-          "SanPham"
-        ],
-        "parameters": [
-          {
-            "name": "maSp",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSanPhamDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSanPhamDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSanPhamDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "CreateChiTietDonHangDto": {
+      "CreateChiTietDonHangRequest": {
         "type": "object",
         "properties": {
           "maSp": {
@@ -696,7 +686,7 @@
         },
         "additionalProperties": false
       },
-      "CreateDanhGiaDto": {
+      "CreateDanhGiaRequest": {
         "type": "object",
         "properties": {
           "soSao": {
@@ -710,7 +700,7 @@
         },
         "additionalProperties": false
       },
-      "CreateDanhMucDto": {
+      "CreateDanhMucRequest": {
         "type": "object",
         "properties": {
           "tenDm": {
@@ -729,7 +719,7 @@
         },
         "additionalProperties": false
       },
-      "CreateDonHangDto": {
+      "CreateDonHangRequest": {
         "type": "object",
         "properties": {
           "tenNguoiNhan": {
@@ -751,14 +741,14 @@
           "chiTiet": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CreateChiTietDonHangDto"
+              "$ref": "#/components/schemas/CreateChiTietDonHangRequest"
             },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "CreateSanPhamDto": {
+      "CreateSanPhamRequest": {
         "type": "object",
         "properties": {
           "tenSp": {
@@ -773,16 +763,11 @@
             "type": "number",
             "format": "double",
             "nullable": true
-          },
-          "trangThai": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "LoginDto": {
+      "LoginRequest": {
         "required": [
           "password",
           "userNameOrEmail"
@@ -800,7 +785,7 @@
         },
         "additionalProperties": false
       },
-      "RegisterDto": {
+      "RegisterRequest": {
         "required": [
           "email",
           "password",
@@ -828,7 +813,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateDanhGiaDto": {
+      "UpdateDanhGiaRequest": {
         "type": "object",
         "properties": {
           "soSao": {
@@ -842,7 +827,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateDanhMucDto": {
+      "UpdateDanhMucRequest": {
         "type": "object",
         "properties": {
           "tenDm": {
@@ -860,7 +845,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateOrderStatusDto": {
+      "UpdateOrderStatusRequest": {
         "type": "object",
         "properties": {
           "trangThai": {
@@ -870,7 +855,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateSanPhamDto": {
+      "UpdateSanPhamRequest": {
         "type": "object",
         "properties": {
           "tenSp": {
@@ -894,6 +879,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Nhập token JWT theo định dạng: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Temp_BE.Domain.DTOs;
+using Microsoft.AspNetCore.Mvc;
+using Temp_BE.Application.Common;
 
 namespace Temp_BE.Api.Controllers
 {
@@ -10,6 +10,6 @@ namespace Temp_BE.Api.Controllers
         protected IActionResult HandleResult<T>(ApiResponse<T> result)
         {
             return StatusCode(result.StatusCode, result);
-        }
+        }  
     }
 }

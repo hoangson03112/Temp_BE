@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Temp_BE.Application.Interface.Services;
 using Temp_BE.Domain.DTOs;
+using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
 {
@@ -31,16 +32,16 @@ namespace Temp_BE.Api.Controllers
         }
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateSanPhamDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateSanPhamRequest req)
         {
-            var result = await _sanPhamService.CreateAsync(dto);
+            var result = await _sanPhamService.CreateAsync(req);
             return HandleResult(result);
         }
         [Authorize(Roles = "Admin")]
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string maSp, [FromBody] UpdateSanPhamDto dto)
+        [HttpPut("{maSp}")]
+        public async Task<IActionResult> Update(string maSp, [FromBody] UpdateSanPhamRequest req)
         {
-            var result = await _sanPhamService.UpdateAsync(maSp, dto);
+            var result = await _sanPhamService.UpdateAsync(maSp, req);
             return HandleResult(result);
         }
         [Authorize(Roles = "Admin")]

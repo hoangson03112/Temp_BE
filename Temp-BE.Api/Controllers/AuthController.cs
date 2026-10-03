@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Temp_BE.Application.Interface.Services;
-using Temp_BE.Domain.DTOs;
+using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
 {
@@ -17,9 +17,9 @@ namespace Temp_BE.Api.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterDto dto)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest req)
         {
-            var result = await _authService.RegisterAsync(dto);
+            var result = await _authService.RegisterAsync(req);
             if (result.Success && result.Data != null)
             {
                 SetTokenCookie(result.Data.Token, result.Data.ExpiresAt);
@@ -28,11 +28,13 @@ namespace Temp_BE.Api.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        public async Task<IActionResult> Login([FromBody] LoginRequest req)
         {
-            var result = await _authService.LoginAsync(dto);
-            SetTokenCookie(result.Data.Token, result.Data.ExpiresAt);
-
+            var result = await _authService.LoginAsync(req);
+            if (result.Success && result.Data != null)
+            {
+                SetTokenCookie(result.Data.Token, result.Data.ExpiresAt);
+            }
             return HandleResult(result);
         }
 
@@ -64,9 +66,9 @@ namespace Temp_BE.Api.Controllers
         {
             var cookieOptions = new CookieOptions
             {
-                HttpOnly = true, 
-                Secure = true,   
-                SameSite = SameSiteMode.None, 
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
                 Expires = expires
             };
             Response.Cookies.Append("access_token", token, cookieOptions);
