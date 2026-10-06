@@ -224,6 +224,26 @@
         "tags": [
           "DanhMuc"
         ],
+        "parameters": [
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -387,6 +407,24 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {
@@ -400,6 +438,26 @@
       "get": {
         "tags": [
           "DonHang"
+        ],
+        "parameters": [
+          {
+            "name": "PageIndex",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -682,6 +740,14 @@
           "soLuong": {
             "type": "number",
             "format": "double"
+          },
+          "donGia": {
+            "type": "number",
+            "format": "double"
+          },
+          "tenSp": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -763,6 +829,10 @@
             "type": "number",
             "format": "double",
             "nullable": true
+          },
+          "trangThai": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

@@ -1,4 +1,4 @@
-﻿using Temp_BE.Application.Common;
+using Temp_BE.Application.Common;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Application.Interface.Services;
 using Temp_BE.Domain.DTOs;
@@ -13,26 +13,35 @@ namespace Temp_BE.Application.Services
         {
             _repo = repo;
         }
-        public async Task<ApiResponse<List<DanhGiaDto>>> GetByMaSp(string maSp)
+
+        public async Task<ApiResponse<List<DanhGiaDto>>> GetByMaSpAsync(string maSp)
         {
             var items = await _repo.GetByMaSpAsync(maSp);
             return ApiResponse<List<DanhGiaDto>>.Ok(items, "Lấy đánh giá của sản phẩm thành công.");
         }
+
         public async Task<ApiResponse<DanhGiaDto>> CreateAsync(string maSp, CreateDanhGiaRequest req)
         {
+            if (req.SoSao < 1 || req.SoSao > 5)
+            {
+                return ApiResponse<DanhGiaDto>.Fail(400, "Số sao đánh giá phải từ 1 đến 5 sao.");
+            }
+
             var item = await _repo.CreateAsync(maSp, req);
-            return ApiResponse<DanhGiaDto>.Ok(item, "Tạo thành công");
+            return ApiResponse<DanhGiaDto>.Created(item, "Tạo đánh giá thành công.");
         }
+
         public async Task<ApiResponse<DanhGiaDto>> UpdateAsync(long id, UpdateDanhGiaRequest req)
         {
             if (req.SoSao < 1 || req.SoSao > 5)
             {
                 return ApiResponse<DanhGiaDto>.Fail(400, "Số sao đánh giá phải từ 1 đến 5 sao.");
             }
+
             var item = await _repo.UpdateAsync(id, req);
             if (item == null)
             {
-                return ApiResponse<DanhGiaDto>.Fail(404, $"Không tìm thấy đánh giá có mã ID {id}.");
+                return ApiResponse<DanhGiaDto>.Fail(404, $"Không tìm thấy đánh giá có ID {id}.");
             }
             return ApiResponse<DanhGiaDto>.Ok(item, "Cập nhật đánh giá thành công.");
         }

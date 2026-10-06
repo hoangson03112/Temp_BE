@@ -1,11 +1,12 @@
-﻿using Temp_BE.Domain.DTOs;
+﻿using Temp_BE.Domain.Common;
+using Temp_BE.Domain.DTOs;
 using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Application.Interface.Repositories
 {
     public interface IDanhMucRepository
     {
-        Task<List<DanhMucDto>> GetAllAsync();
+        Task<PagedResult<DanhMucDto>> GetPagedListAsync(PagedRequest request, CancellationToken ct = default);
         Task<DanhMucDto?> GetByIdAsync(string maDm);
         Task<DanhMucDto> CreateAsync(CreateDanhMucRequest req);
         Task<DanhMucDto?> UpdateAsync(string maDm, UpdateDanhMucRequest req);

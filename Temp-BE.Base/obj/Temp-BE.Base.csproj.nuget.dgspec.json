@@ -61,6 +61,10 @@
             "NetCore.Utilities.Core": {
               "target": "Package",
               "version": "[26.4.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
           "imports": [

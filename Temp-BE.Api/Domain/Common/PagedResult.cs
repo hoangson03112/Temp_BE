@@ -1,4 +1,4 @@
-﻿namespace Temp_BE.Domain.Common
+namespace Temp_BE.Domain.Common
 {
     public class PagedResult<T>
     {

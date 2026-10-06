@@ -5,6 +5,7 @@ using NetCore.Oracle.DataAccess;
 using System.Text;
 using Temp_BE.Api.Middlewares;
 using Temp_BE.Application;
+using Temp_BE.Base.Common;
 using Temp_BE.Base.Databases;
 using Temp_BE.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
@@ -64,7 +65,7 @@ builder.Services.AddCors(options =>
               .AllowCredentials();
     });
 });
-
+builder.Host.AddCommonLogging(builder.Configuration, builder.Configuration["Service:Name"]);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

@@ -12,34 +12,37 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
     public class SanPhamRepository : ISanPhamRepository
     {
         private readonly IDbSession<DbQLBH> _db;
+        private readonly ILogger<SanPhamRepository> _logger;
 
-        public SanPhamRepository(IDbSession<DbQLBH> db)
+
+        public SanPhamRepository(IDbSession<DbQLBH> db, ILogger<SanPhamRepository> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         public async Task<PagedResult<SanPhamDto>> GetPagedListAsync(SanPhamFilterRequest req, CancellationToken ct = default)
         {
+
+
             var keyword = string.IsNullOrWhiteSpace(req.Keyword) ? null : req.Keyword.Trim();
             var skip = (req.PageIndex - 1) * req.PageSize;
 
-            var baseQuery =
-                from x in _db.GetAll<SanPhamDb>()
-                where (x.GiaBan >= req.MinPrice).IfGenerateQuery(req.MinPrice.HasValue)
-                   && (x.GiaBan <= req.MaxPrice).IfGenerateQuery(req.MaxPrice.HasValue)
-                   && (x.TrangThai == req.TrangThai).IfGenerateQuery(req.TrangThai.HasValue)
-                   && (x.TenSp.Contains(keyword) || x.MaSp.Contains(keyword)).IfGenerateQuery(keyword != null)
-                select x;
-
             var countRows = await _db.ToListAsync(
-                from x in baseQuery
-                select new { total = 1.Count() },
+                 from x in _db.GetAll<SanPhamDb>()
+                 where (x.TenSp.Contains(keyword) || x.MaSp.Contains(keyword))
+                     .IfGenerateQuery(keyword != null)
+                 select new { total = 1.Count() },
                 isMapping: false, ct: ct);
 
             var total = (long)(countRows.FirstOrDefault()?.total ?? 0);
-
+            var filtered =
+            from x in _db.GetAll<SanPhamDb>()
+            where (x.TenSp.Contains(keyword) || x.MaSp.Contains(keyword) || x.GiaBan <= req.MaxPrice || x.GiaBan >= req.MinPrice)
+                .IfGenerateQuery(keyword != null)
+            select x;
             var numberedQuery =
-                from x in baseQuery
+                from x in filtered
                 select new
                 {
                     RowNumber = x.RowNumber(() => x.MaSp),
@@ -96,6 +99,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 TenSp = req.TenSp,
                 GiaBan = req.GiaBan,
                 SoLuong = req.SoLuong,
+                TrangThai = req.TrangThai
             };
 
             await _db.InsertAsync(entity);

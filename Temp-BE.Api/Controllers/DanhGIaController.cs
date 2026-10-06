@@ -13,33 +13,36 @@ namespace Temp_BE.Api.Controllers
         {
             _danhGiaService = danhGiaService;
         }
+
         [HttpGet("{maSp}")]
         public async Task<IActionResult> GetAll(string maSp)
         {
-            var result = await _danhGiaService.GetByMaSp(maSp);
+            var result = await _danhGiaService.GetByMaSpAsync(maSp);
             return HandleResult(result);
         }
 
         [Authorize]
         [HttpPost("{maSp}")]
-        public async Task<IActionResult> CreateDanhGia(string maSp, [FromBody] CreateDanhGiaRequest req)
+        public async Task<IActionResult> Create(string maSp, [FromBody] CreateDanhGiaRequest req)
         {
             var result = await _danhGiaService.CreateAsync(maSp, req);
             return HandleResult(result);
-
         }
+
+        [Authorize]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateDanhGia(long id, [FromBody] UpdateDanhGiaRequest req)
+        public async Task<IActionResult> Update(long id, [FromBody] UpdateDanhGiaRequest req)
         {
             var result = await _danhGiaService.UpdateAsync(id, req);
             return HandleResult(result);
         }
+
+        [Authorize]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDanhGia(long id)
+        public async Task<IActionResult> Delete(long id)
         {
             var result = await _danhGiaService.DeleteAsync(id);
             return HandleResult(result);
         }
     }
-
 }

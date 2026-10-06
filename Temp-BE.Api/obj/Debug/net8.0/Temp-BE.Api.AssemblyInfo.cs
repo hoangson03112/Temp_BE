@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Temp-BE.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcfce1a6bfdfb706c7237375ea85f9920eaf5e62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+714f6d0b1fe1fd3b4cc8e1b7d34850b885af1352")]
 [assembly: System.Reflection.AssemblyProductAttribute("Temp-BE.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Temp-BE.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

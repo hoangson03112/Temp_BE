@@ -15,7 +15,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
         {
             _db = db;
         }
-
         public async Task<List<DanhGiaDto>> GetByMaSpAsync(string maSp)
         {
             return await _db.ToListAsync<DanhGiaDto>(

@@ -6,9 +6,9 @@ using Temp_BE.Application.Common;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Application.Interface.Services;
 using Temp_BE.Domain.DTOs;
+using Temp_BE.Domain.Models;
 using Temp_BE.Domain.Requests;
 using Temp_BE.Domain.Responses;
-using Temp_BE.Infrastructure.Persistence.DbMappings;
 
 namespace Temp_BE.Application.Services
 {
@@ -29,7 +29,7 @@ namespace Temp_BE.Application.Services
             {
                 return ApiResponse<AuthResponse>.Fail(400, "Username hoặc Email đã được sử dụng.");
             }
-            var newUser = new UserDb
+            var newUser = new UserAccount
             {
                 UserName = req.UserName.Trim(),
                 Email = req.Email.Trim().ToLower(),
@@ -98,7 +98,7 @@ namespace Temp_BE.Application.Services
             });
         }
 
-        private string GenerateJwtToken(UserDb user, out DateTime expires)
+        private string GenerateJwtToken(UserAccount user, out DateTime expires)
         {
             var jwtConfig = _config.GetSection("Jwt");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfig["Key"]!));

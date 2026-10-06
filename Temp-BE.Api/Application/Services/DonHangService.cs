@@ -1,6 +1,7 @@
 using Temp_BE.Application.Common;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Application.Interface.Services;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.DTOs;
 using Temp_BE.Domain.Requests;
 
@@ -49,7 +50,9 @@ namespace Temp_BE.Application.Services
                 sanPhamList.Add(new CreateChiTietDonHangRequest
                 {
                     MaSp = sp.MaSp,
-                    SoLuong = item.SoLuong
+                    SoLuong = item.SoLuong,
+                    DonGia = sp.GiaBan,
+                    TenSp = sp.TenSp
                 });
             }
 
@@ -57,16 +60,16 @@ namespace Temp_BE.Application.Services
             return ApiResponse<DonHangDto>.Created(createdOrder, "Đặt hàng thành công!");
         }
 
-        public async Task<ApiResponse<List<DonHangDto>>> GetMyOrdersAsync(long userId)
+        public async Task<ApiResponse<PagedResult<DonHangDto>>> GetPagedListAsync(long userId, PagedRequest request, CancellationToken ct = default)
         {
-            var list = await _donHangRepo.GetOrdersByUserAsync(userId);
-            return ApiResponse<List<DonHangDto>>.Ok(list, "Lấy danh sách đơn hàng thành công.");
+            var list = await _donHangRepo.GetPagedListAsync(userId, request, ct);
+            return ApiResponse<PagedResult<DonHangDto>>.Ok(list, "Lấy danh sách đơn hàng thành công.");
         }
 
-        public async Task<ApiResponse<List<DonHangDto>>> GetAllOrdersAsync(int? trangThai)
+        public async Task<ApiResponse<PagedResult<DonHangDto>>> GetAllOrdersAsync(int? trangThai, PagedRequest request, CancellationToken ct = default)
         {
-            var list = await _donHangRepo.GetAllOrdersAsync(trangThai);
-            return ApiResponse<List<DonHangDto>>.Ok(list);
+            var list = await _donHangRepo.GetAllOrdersAsync(trangThai, request, ct);
+            return ApiResponse<PagedResult<DonHangDto>>.Ok(list, "Lấy danh sách đơn hàng thành công.");
         }
 
         public async Task<ApiResponse<DonHangDto>> GetOrderByIdAsync(string maDh)

@@ -1,6 +1,7 @@
 ﻿using Temp_BE.Application.Common;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Application.Interface.Services;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.DTOs;
 using Temp_BE.Domain.Requests;
 
@@ -11,10 +12,10 @@ namespace Temp_BE.Application.Services
         private readonly IDanhMucRepository _repo;
         public DanhMucService(IDanhMucRepository repo) { _repo = repo; }
 
-        public async Task<ApiResponse<List<DanhMucDto>>> GetAllAsync()
+        public async Task<ApiResponse<PagedResult<DanhMucDto>>> GetPagedListAsync(PagedRequest req, CancellationToken ct = default)
         {
-            var data = await _repo.GetAllAsync();
-            return ApiResponse<List<DanhMucDto>>.Ok(data, "Lấy danh sách danh mục thành công.");
+            var data = await _repo.GetPagedListAsync(req, ct);
+            return ApiResponse<PagedResult<DanhMucDto>>.Ok(data, "Lấy danh sách danh mục thành công.");
         }
 
         public async Task<ApiResponse<DanhMucDto>> GetByMaDmAsync(string maDm)

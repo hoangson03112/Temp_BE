@@ -1,6 +1,7 @@
 using NetCore.Oracle.DataAccess;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Base.Databases;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.DTOs;
 using Temp_BE.Domain.Requests;
 using Temp_BE.Infrastructure.Persistence.DbMappings;
@@ -21,7 +22,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 throw new ArgumentException("Danh sách sản phẩm không được để trống.");
             }
 
-            // Dùng Guid để tránh collision khi nhiều request đồng thời
             string maDh = $"DH{Guid.NewGuid():N}".Substring(0, 20).ToUpper();
             decimal tongTien = 0;
 
@@ -30,11 +30,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
 
             foreach (var item in sanPhamList)
             {
-                var product = await _repo.GetByMaSpAsync(item.MaSp);
-                if (product == null)
-                    throw new Exception($"Sản phẩm với mã '{item.MaSp}' không tồn tại.");
-
-                decimal donGia = product.GiaBan;
+                decimal donGia = item.DonGia;
                 decimal thanhTien = donGia * item.SoLuong;
                 tongTien += thanhTien;
 
@@ -50,6 +46,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 danhSachMonDto.Add(new ChiTietDonHangDto
                 {
                     MaSp = item.MaSp,
+                    TenSp = item.TenSp,
                     SoLuong = item.SoLuong,
                     DonGia = donGia,
                     ThanhTien = thanhTien
@@ -69,7 +66,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 NgayTao = DateTime.Now
             };
 
-            // Wrap tất cả trong 1 transaction — rollback nếu bất kỳ bước nào lỗi
             await using var scope = await _db.BeginScopeAsync(System.Data.IsolationLevel.ReadCommitted);
             try
             {
@@ -80,7 +76,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                     await _db.InsertAsync(ct);
                 }
 
-                // Trừ tồn kho sau khi insert thành công
                 foreach (var item in sanPhamList)
                 {
                     await _repo.DeductStockAsync(item.MaSp, item.SoLuong);
@@ -108,52 +103,118 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 DanhSachMon = danhSachMonDto
             };
         }
-        public async Task<List<DonHangDto>> GetOrdersByUserAsync(long userId)
+        public async Task<PagedResult<DonHangDto>> GetPagedListAsync(long userId, PagedRequest req, CancellationToken ct = default)
         {
-            return await _db.ToListAsync<DonHangDto>(
-                from d in _db.GetAll<DonHangDb>()
-                where d.UserId == userId
-                orderby d.NgayTao descending
+            var skip = (req.PageIndex - 1) * req.PageSize;
+
+
+            var countRows = await _db.ToListAsync(
+                from x in _db.GetAll<DonHangDb>()
+                where x.UserId == userId
+                select new { total = 1.Count() },
+                isMapping: false, ct: ct);
+
+            var total = (long)(countRows.FirstOrDefault()?.total ?? 0);
+            var filtered =
+            from x in _db.GetAll<DonHangDb>()
+            where x.UserId == userId
+            select x;
+            var numberedQuery =
+                from x in filtered
                 select new
                 {
-                    d.MaDh,
-                    d.UserId,
-                    d.TenNguoiNhan,
-                    d.SoDt,
-                    d.DiaChi,
-                    d.TongTien,
-                    d.TrangThai,
-                    d.GhiChu,
-                    d.NgayTao
-                },
-                isMapping: false
+                    RowNumber = x.RowNumber(() => x.MaDh),
+                    x.MaDh,
+                    x.UserId,
+                    x.TenNguoiNhan,
+                    x.SoDt,
+                    x.DiaChi,
+                    x.TongTien,
+                    x.TrangThai,
+                    x.GhiChu,
+                    x.NgayTao
+                };
+
+            var pageQuery =
+                from x in numberedQuery
+                where x.RowNumber > skip && x.RowNumber <= skip + req.PageSize
+                orderby x.RowNumber
+                select x;
+
+            var rows = await _db.ToListAsync(pageQuery, isMapping: false, ct: ct);
+
+            return new PagedResult<DonHangDto>(
+                rows.Select(x => new DonHangDto
+                {
+                    MaDh = x.MaDh,
+                    UserId = x.UserId,
+                    TenNguoiNhan = x.TenNguoiNhan,
+                    SoDt = x.SoDt,
+                    DiaChi = x.DiaChi,
+                    TongTien = x.TongTien,
+                    TrangThai = x.TrangThai,
+                    GhiChu = x.GhiChu,
+                    NgayTao = x.NgayTao
+                }).ToList(),
+                total
             );
         }
 
-        public async Task<List<DonHangDto>> GetAllOrdersAsync(int? trangThai)
+        public async Task<PagedResult<DonHangDto>> GetAllOrdersAsync(int? trangThai, PagedRequest req, CancellationToken ct = default)
         {
-            var query = from d in _db.GetAll<DonHangDb>() select d;
+            var skip = (req.PageIndex - 1) * req.PageSize;
+
+            var baseQuery = from d in _db.GetAll<DonHangDb>() select d;
             if (trangThai.HasValue)
             {
-                query = query.Where(d => d.TrangThai == trangThai.Value);
+                baseQuery = baseQuery.Where(d => d.TrangThai == trangThai.Value);
             }
 
-            return await _db.ToListAsync<DonHangDto>(
-                from d in query
-                orderby d.NgayTao descending
+            var countRows = await _db.ToListAsync(
+                from x in baseQuery
+                select new { total = 1.Count() },
+                isMapping: false, ct: ct);
+
+            var total = (long)(countRows.FirstOrDefault()?.total ?? 0);
+
+            var numberedQuery =
+                from x in baseQuery
                 select new
                 {
-                    d.MaDh,
-                    d.UserId,
-                    d.TenNguoiNhan,
-                    d.SoDt,
-                    d.DiaChi,
-                    d.TongTien,
-                    d.TrangThai,
-                    d.GhiChu,
-                    d.NgayTao
-                },
-                isMapping: false
+                    RowNumber = x.RowNumber(() => x.MaDh),
+                    x.MaDh,
+                    x.UserId,
+                    x.TenNguoiNhan,
+                    x.SoDt,
+                    x.DiaChi,
+                    x.TongTien,
+                    x.TrangThai,
+                    x.GhiChu,
+                    x.NgayTao
+                };
+
+            var pageQuery =
+                from x in numberedQuery
+                where x.RowNumber > skip && x.RowNumber <= skip + req.PageSize
+                orderby x.RowNumber
+                select x;
+
+            var rows = await _db.ToListAsync(pageQuery, isMapping: false, ct: ct);
+
+            return new PagedResult<DonHangDto>(
+                rows.Select(x => new DonHangDto
+                {
+                    MaDh = x.MaDh,
+                    UserId = x.UserId,
+                    TenNguoiNhan = x.TenNguoiNhan,
+                    SoDt = x.SoDt,
+                    DiaChi = x.DiaChi,
+                    TongTien = x.TongTien,
+                    TrangThai = x.TrangThai,
+                    GhiChu = x.GhiChu,
+                    NgayTao = x.NgayTao
+                }).ToList(),
+                total
             );
         }
 

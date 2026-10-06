@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Temp_BE.Application.Interface.Services;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
@@ -17,20 +18,26 @@ namespace Temp_BE.Api.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create([FromBody] CreateDonHangRequest req)
+        public async Task<IActionResult> Create([FromBody] CreateDonHangRequest req, CancellationToken ct)
         {
-            var userId = long.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            if (!long.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out long userId))
+                return Unauthorized();
+
             var result = await _donHangService.CreateOrderAsync(userId, req);
             return HandleResult(result);
         }
+
         [HttpGet("my-orders")]
         [Authorize]
-        public async Task<IActionResult> GetMyOrders()
+        public async Task<IActionResult> GetMyOrders([FromQuery] PagedRequest request, CancellationToken ct)
         {
-            var userId = long.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-            var result = await _donHangService.GetMyOrdersAsync(userId);
+            if (!long.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out long userId))
+                return Unauthorized();
+
+            var result = await _donHangService.GetPagedListAsync(userId, request, ct);
             return HandleResult(result);
         }
+
         [HttpGet("{maDh}")]
         [Authorize]
         public async Task<IActionResult> GetById(string maDh)
@@ -38,13 +45,15 @@ namespace Temp_BE.Api.Controllers
             var result = await _donHangService.GetOrderByIdAsync(maDh);
             return HandleResult(result);
         }
+
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int? status)
+        public async Task<IActionResult> GetAll([FromQuery] int? status, [FromQuery] PagedRequest req, CancellationToken ct)
         {
-            var result = await _donHangService.GetAllOrdersAsync(status);
+            var result = await _donHangService.GetAllOrdersAsync(status, req, ct);
             return HandleResult(result);
         }
+
         [Authorize(Roles = "Admin")]
         [HttpPut("{maDh}/status")]
         public async Task<IActionResult> UpdateStatus(string maDh, [FromBody] UpdateOrderStatusRequest req)

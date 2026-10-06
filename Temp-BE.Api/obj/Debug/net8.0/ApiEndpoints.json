@@ -53,7 +53,7 @@
   },
   {
     "ContainingType": "Temp_BE.Api.Controllers.DanhGiaController",
-    "Method": "UpdateDanhGia",
+    "Method": "Update",
     "RelativePath": "api/danh-gia/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -74,7 +74,7 @@
   },
   {
     "ContainingType": "Temp_BE.Api.Controllers.DanhGiaController",
-    "Method": "DeleteDanhGia",
+    "Method": "Delete",
     "RelativePath": "api/danh-gia/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -106,7 +106,7 @@
   },
   {
     "ContainingType": "Temp_BE.Api.Controllers.DanhGiaController",
-    "Method": "CreateDanhGia",
+    "Method": "Create",
     "RelativePath": "api/danh-gia/{maSp}",
     "HttpMethod": "POST",
     "IsController": true,
@@ -127,17 +127,28 @@
   },
   {
     "ContainingType": "Temp_BE.Api.Controllers.DanhMucController",
-    "Method": "GetAll",
+    "Method": "GetPagedList",
     "RelativePath": "api/danh-muc",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Temp_BE.Api.Controllers.DanhMucController",
-    "Method": "CreateAsync",
+    "Method": "Create",
     "RelativePath": "api/danh-muc",
     "HttpMethod": "POST",
     "IsController": true,
@@ -232,6 +243,16 @@
         "Name": "status",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -280,7 +301,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

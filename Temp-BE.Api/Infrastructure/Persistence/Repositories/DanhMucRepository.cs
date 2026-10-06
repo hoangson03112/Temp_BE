@@ -1,6 +1,7 @@
-﻿using NetCore.Oracle.DataAccess;
+using NetCore.Oracle.DataAccess;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Base.Databases;
+using Temp_BE.Domain.Common;
 using Temp_BE.Domain.DTOs;
 using Temp_BE.Domain.Requests;
 using Temp_BE.Infrastructure.Persistence.DbMappings;
@@ -14,12 +15,48 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
         private readonly IDbSession<DbQLBH> _db;
         public DanhMucRepository(IDbSession<DbQLBH> db) { _db = db; }
 
-        public async Task<List<DanhMucDto>> GetAllAsync()
+        public async Task<PagedResult<DanhMucDto>> GetPagedListAsync(PagedRequest req, CancellationToken ct = default)
         {
-            return await _db.ToListAsync<DanhMucDto>(
-                from a in _db.GetAll<DanhMucDb>()
-                select new { a.MaDm, a.TenDm, a.MoTa, a.TrangThai },
-                isMapping: false
+            var skip = (req.PageIndex - 1) * req.PageSize;
+
+            var countRows = await _db.ToListAsync(
+                from x in _db.GetAll<DanhMucDb>()
+                select new { total = 1.Count() },
+                isMapping: false, ct: ct);
+
+            var total = (long)(countRows.FirstOrDefault()?.total ?? 0);
+
+            var numberedQuery =
+                from x in _db.GetAll<DanhMucDb>()
+                select new
+                {
+                    RowNumber = x.RowNumber(() => x.MaDm),
+                    x.MaDm,
+                    x.TenDm,
+                    x.MoTa,
+                    x.TrangThai,
+
+                };
+
+            var pageQuery =
+                from x in numberedQuery
+                where x.RowNumber > skip && x.RowNumber <= skip + req.PageSize
+                orderby x.RowNumber
+                select x;
+
+            var rows = await _db.ToListAsync(pageQuery, isMapping: false, ct: ct);
+
+            return new PagedResult<DanhMucDto>(
+                rows.Select(x => new DanhMucDto
+                {
+                    MaDm = x.MaDm,
+                    TenDm = x.TenDm,
+                    MoTa = x.MoTa,
+                    TrangThai = x.TrangThai
+                }).ToList(),
+                total
+
+
             );
         }
 
@@ -35,7 +72,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
 
         public async Task<DanhMucDto> CreateAsync(CreateDanhMucRequest req)
         {
-            string maDm = $"DM{DateTime.Now:yyMMddHHmmss}{new Random().Next(10, 99)}";
+            string maDm = $"DM{Guid.NewGuid():N}".Substring(0, 16).ToUpper();
             var entity = new DanhMucDb
             {
                 MaDm = maDm,
