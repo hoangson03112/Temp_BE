@@ -20,5 +20,6 @@ namespace Temp_BE.Domain.Requests
         [Required, MinLength(6, ErrorMessage = "Mật khẩu tối thiểu 6 ký tự")]
         public string Password { get; set; } = default!;
         public string? FullName { get; set; }
+
     }
 }

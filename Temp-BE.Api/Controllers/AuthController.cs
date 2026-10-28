@@ -39,7 +39,7 @@ namespace Temp_BE.Api.Controllers
         }
 
         [Authorize]
-        [HttpGet("profile")]
+        [HttpGet("me")]
         public async Task<IActionResult> GetProfile()
         {
             var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -49,6 +49,7 @@ namespace Temp_BE.Api.Controllers
             }
 
             var result = await _authService.GetProfileAsync(userId);
+            Console.WriteLine(result);
             return HandleResult(result);
         }
         [HttpPost("logout")]

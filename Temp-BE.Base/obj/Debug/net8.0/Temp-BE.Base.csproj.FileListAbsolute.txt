@@ -6,8 +6,9 @@ D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.GeneratedMSBuildEd
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.AssemblyInfoInputs.cache
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.AssemblyInfo.cs
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.csproj.CoreCompileInputs.cache
+D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.sourcelink.json
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.dll
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\refint\Temp-BE.Base.dll
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.pdb
 D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\ref\Temp-BE.Base.dll
-D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE.Base.sourcelink.json
+D:\PROJECT\Temp-BE\Temp-BE.Base\obj\Debug\net8.0\Temp-BE..46AEF83E.Up2Date

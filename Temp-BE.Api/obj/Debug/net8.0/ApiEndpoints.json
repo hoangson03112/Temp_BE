@@ -28,7 +28,7 @@
   {
     "ContainingType": "Temp_BE.Api.Controllers.AuthController",
     "Method": "GetProfile",
-    "RelativePath": "api/auth/profile",
+    "RelativePath": "api/auth/me",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -49,6 +49,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaoCaoController",
+    "Method": "DesignerMau12",
+    "RelativePath": "api/bao-cao/custom/mau-12-cbh",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "config",
+        "Type": "Temp_BE.Api.Domain.DTOs.ReportConfigDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BaoCaoController",
+    "Method": "ExportMau12Cbh",
+    "RelativePath": "api/bao-cao/export-mau12-cbh",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -316,6 +342,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Temp_BE.Api.Controllers.ItemController",
+    "Method": "GetPagedList",
+    "RelativePath": "api/item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "take",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Temp_BE.Api.Controllers.SanPhamController",
     "Method": "GetPagedList",
     "RelativePath": "api/san-pham",
@@ -431,6 +483,102 @@
         "Name": "maSp",
         "Type": "System.String",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Temp_BE.Api.Controllers.SanPhamController",
+    "Method": "ExportReport",
+    "RelativePath": "api/san-pham/export",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Format",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DonViCapTren",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DonViBaoCao",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quy",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nam",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayBaoCao",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NguoiLap",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "KeToanTruong",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThuTruongDonVi",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TrangThai",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAscending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

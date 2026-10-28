@@ -1,12 +1,12 @@
-using Temp_BE.Domain.Models;
+using Temp_BE.Domain.DTOs;
 
 namespace Temp_BE.Application.Interface.Repositories
 {
     public interface IAuthRepository
     {
-        Task<UserAccount?> GetByUserNameOrEmailAsync(string identifier);
-        Task<UserAccount?> GetByIdAsync(long id);
+        Task<UserDto?> GetByUserNameOrEmailAsync(string identifier);
+        Task<UserDto?> GetByIdAsync(long id);
         Task<bool> ExistsByUserNameOrEmailAsync(string userName, string email);
-        Task<UserAccount> CreateAsync(UserAccount user);
+        Task<UserDto> CreateAsync(UserDto user);
     }
 }

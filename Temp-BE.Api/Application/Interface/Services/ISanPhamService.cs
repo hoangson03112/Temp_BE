@@ -12,5 +12,6 @@ namespace Temp_BE.Application.Interface.Services
         Task<ApiResponse<SanPhamDto>> CreateAsync(CreateSanPhamRequest req);
         Task<ApiResponse<SanPhamDto>> UpdateAsync(string maSp, UpdateSanPhamRequest req);
         Task<ApiResponse<bool>> DeleteAsync(string maSp);
+        Task<ApiResponse<List<SanPhamDto>>> GetAllForReportAsync(SanPhamFilterRequest req);
     }
 }

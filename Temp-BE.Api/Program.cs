@@ -1,3 +1,4 @@
+using DevExpress.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -15,7 +16,7 @@ builder.Services.AddDALService(cfg =>
 {
     cfg.Add<DbQLBH>(connectionString);
 });
-
+builder.Services.AddDevExpressControls();
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
 var jwtConfig = builder.Configuration.GetSection("Jwt");
@@ -53,7 +54,6 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddAuthorization();
-
 var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
 builder.Services.AddCors(options =>
 {
@@ -98,15 +98,13 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
-
 app.UseMiddleware<ExceptionMiddleware>();
-
+app.UseDevExpressControls();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 

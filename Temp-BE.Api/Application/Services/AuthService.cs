@@ -6,7 +6,6 @@ using Temp_BE.Application.Common;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Application.Interface.Services;
 using Temp_BE.Domain.DTOs;
-using Temp_BE.Domain.Models;
 using Temp_BE.Domain.Requests;
 using Temp_BE.Domain.Responses;
 
@@ -29,15 +28,14 @@ namespace Temp_BE.Application.Services
             {
                 return ApiResponse<AuthResponse>.Fail(400, "Username hoặc Email đã được sử dụng.");
             }
-            var newUser = new UserAccount
+            var newUser = new UserDto
             {
                 UserName = req.UserName.Trim(),
                 Email = req.Email.Trim().ToLower(),
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(req.Password),
                 FullName = req.FullName,
                 Role = "Customer",
-                IsActive = 1,
-                CreatedAt = DateTime.Now
+
             };
 
             await _authRepo.CreateAsync(newUser);
@@ -83,14 +81,14 @@ namespace Temp_BE.Application.Services
             }, "Đăng nhập thành công.");
         }
 
-        public async Task<ApiResponse<UserDto>> GetProfileAsync(long userId)
+        public async Task<ApiResponse<AuthResponse>> GetProfileAsync(long userId)
         {
             var user = await _authRepo.GetByIdAsync(userId);
-            if (user == null) return ApiResponse<UserDto>.Fail(404, "Không tìm thấy người dùng.");
+            if (user == null) return ApiResponse<AuthResponse>.Fail(404, "Không tìm thấy người dùng.");
 
-            return ApiResponse<UserDto>.Ok(new UserDto
+            return ApiResponse<AuthResponse>.Ok(new AuthResponse
             {
-                Id = user.Id,
+                UserId = user.Id,
                 UserName = user.UserName,
                 Email = user.Email,
                 FullName = user.FullName,
@@ -98,7 +96,7 @@ namespace Temp_BE.Application.Services
             });
         }
 
-        private string GenerateJwtToken(UserAccount user, out DateTime expires)
+        private string GenerateJwtToken(UserDto user, out DateTime expires)
         {
             var jwtConfig = _config.GetSection("Jwt");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfig["Key"]!));

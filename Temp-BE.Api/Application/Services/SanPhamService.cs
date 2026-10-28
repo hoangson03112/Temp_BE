@@ -70,5 +70,11 @@ namespace Temp_BE.Application.Services
             await _sanPhamRepo.DeleteAsync(maSp);
             return ApiResponse<bool>.Ok(true, $"Xoá thành công sản phẩm '{maSp}'.");
         }
+        public async Task<ApiResponse<List<SanPhamDto>>> GetAllForReportAsync(SanPhamFilterRequest req)
+        {
+            var items = await _sanPhamRepo.GetAllForReportAsync(req);
+            return ApiResponse<List<SanPhamDto>>.Ok(items, "Lấy danh sách sản phẩm cho báo cáo thành công.");
+        }
+
     }
 }

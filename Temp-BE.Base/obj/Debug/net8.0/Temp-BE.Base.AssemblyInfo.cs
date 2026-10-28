@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Temp-BE.Base")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+714f6d0b1fe1fd3b4cc8e1b7d34850b885af1352")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bb2f4c5d9e0e0b4ca2b8b97113f87cd343179f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Temp-BE.Base")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Temp-BE.Base")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,7 @@
 using NetCore.Oracle.DataAccess;
 using Temp_BE.Application.Interface.Repositories;
 using Temp_BE.Base.Databases;
-using Temp_BE.Domain.Models;
+using Temp_BE.Domain.DTOs;
 using Temp_BE.Infrastructure.Persistence.DbMappings;
 
 namespace Temp_BE.Infrastructure.Persistence.Repositories
@@ -15,7 +15,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
             _db = db;
         }
 
-        public async Task<UserAccount?> GetByUserNameOrEmailAsync(string identifier)
+        public async Task<UserDto?> GetByUserNameOrEmailAsync(string identifier)
         {
             var entity = await _db.FirstOrDefaultAsync<UserDb>(
                 from u in _db.GetAll<UserDb>()
@@ -25,7 +25,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
             return ToModel(entity);
         }
 
-        public async Task<UserAccount?> GetByIdAsync(long id)
+        public async Task<UserDto?> GetByIdAsync(long id)
         {
             var entity = await _db.FirstOrDefaultAsync<UserDb>(
                 from u in _db.GetAll<UserDb>()
@@ -45,7 +45,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
             return res.Count > 0;
         }
 
-        public async Task<UserAccount> CreateAsync(UserAccount user)
+        public async Task<UserDto> CreateAsync(UserDto user)
         {
             var entity = new UserDb
             {
@@ -54,18 +54,16 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 PasswordHash = user.PasswordHash,
                 FullName = user.FullName,
                 Role = user.Role,
-                IsActive = user.IsActive,
-                CreatedAt = user.CreatedAt
             };
             await _db.InsertAsync(entity);
             user.Id = entity.Id;
             return user;
         }
 
-        private static UserAccount? ToModel(UserDb? entity)
+        private static UserDto? ToModel(UserDb? entity)
         {
             if (entity == null) return null;
-            return new UserAccount
+            return new UserDto
             {
                 Id = entity.Id,
                 UserName = entity.UserName,
@@ -73,8 +71,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 PasswordHash = entity.PasswordHash,
                 FullName = entity.FullName,
                 Role = entity.Role,
-                IsActive = entity.IsActive,
-                CreatedAt = entity.CreatedAt
             };
         }
     }

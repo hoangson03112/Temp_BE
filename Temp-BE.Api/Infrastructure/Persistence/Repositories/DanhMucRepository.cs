@@ -55,8 +55,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                     TrangThai = x.TrangThai
                 }).ToList(),
                 total
-
-
             );
         }
 

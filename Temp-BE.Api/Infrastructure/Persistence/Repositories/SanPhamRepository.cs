@@ -14,7 +14,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
         private readonly IDbSession<DbQLBH> _db;
         private readonly ILogger<SanPhamRepository> _logger;
 
-
         public SanPhamRepository(IDbSession<DbQLBH> db, ILogger<SanPhamRepository> logger)
         {
             _db = db;
@@ -23,24 +22,24 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
 
         public async Task<PagedResult<SanPhamDto>> GetPagedListAsync(SanPhamFilterRequest req, CancellationToken ct = default)
         {
-
-
             var keyword = string.IsNullOrWhiteSpace(req.Keyword) ? null : req.Keyword.Trim();
             var skip = (req.PageIndex - 1) * req.PageSize;
-
-            var countRows = await _db.ToListAsync(
-                 from x in _db.GetAll<SanPhamDb>()
-                 where (x.TenSp.Contains(keyword) || x.MaSp.Contains(keyword))
-                     .IfGenerateQuery(keyword != null)
-                 select new { total = 1.Count() },
-                isMapping: false, ct: ct);
-
-            var total = (long)(countRows.FirstOrDefault()?.total ?? 0);
             var filtered =
             from x in _db.GetAll<SanPhamDb>()
-            where (x.TenSp.Contains(keyword) || x.MaSp.Contains(keyword) || x.GiaBan <= req.MaxPrice || x.GiaBan >= req.MinPrice)
-                .IfGenerateQuery(keyword != null)
+            where (x.TenSp.RegexpLike(keyword, "i") || x.MaSp.RegexpLike(keyword, "i")).IfGenerateQuery(keyword != null)
+               && (x.GiaBan >= req.MinPrice!.Value).IfGenerateQuery(req.MinPrice.HasValue)
+               && (x.GiaBan <= req.MaxPrice!.Value).IfGenerateQuery(req.MaxPrice.HasValue)
+               && (x.TrangThai == req.TrangThai!.Value).IfGenerateQuery(req.TrangThai.HasValue)
             select x;
+            var countRows = await _db.ToListAsync(
+                from x in filtered
+                select new { total = 1.Count() },
+                isMapping: false, ct: ct);
+            var total = (long)(countRows.FirstOrDefault()?.total ?? 0);
+            if (total == 0)
+            {
+                return new PagedResult<SanPhamDto>(new List<SanPhamDto>(), 0);
+            }
             var numberedQuery =
                 from x in filtered
                 select new
@@ -57,21 +56,18 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 from a in numberedQuery
                 where a.RowNumber > skip && a.RowNumber <= skip + req.PageSize
                 orderby a.RowNumber
-                select a;
+                select new SanPhamDto
+                {
+                    MaSp = a.MaSp,
+                    TenSp = a.TenSp,
+                    GiaBan = a.GiaBan,
+                    SoLuong = a.SoLuong,
+                    TrangThai = a.TrangThai
+                };
 
             var rows = await _db.ToListAsync(pageQuery, isMapping: false, ct: ct);
 
-            return new PagedResult<SanPhamDto>(
-                rows.Select(x => new SanPhamDto
-                {
-                    MaSp = x.MaSp,
-                    TenSp = x.TenSp,
-                    GiaBan = x.GiaBan,
-                    SoLuong = x.SoLuong,
-                    TrangThai = x.TrangThai
-                }).ToList(),
-                total
-            );
+            return new PagedResult<SanPhamDto>(rows, total);
         }
         public async Task<SanPhamDto?> GetByMaSpAsync(string maSp)
         {
@@ -99,11 +95,11 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 TenSp = req.TenSp,
                 GiaBan = req.GiaBan,
                 SoLuong = req.SoLuong,
-                TrangThai = req.TrangThai
+                TrangThai = 0
             };
 
             await _db.InsertAsync(entity);
-            return new SanPhamDto
+            var result = new SanPhamDto
             {
                 MaSp = entity.MaSp,
                 TenSp = entity.TenSp,
@@ -111,6 +107,7 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
                 SoLuong = entity.SoLuong,
                 TrangThai = entity.TrangThai
             };
+            return result;
         }
 
         public async Task<SanPhamDto?> UpdateAsync(string maSp, UpdateSanPhamRequest req)
@@ -126,7 +123,6 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
             entity.TenSp = req.TenSp;
             entity.GiaBan = req.GiaBan;
             entity.SoLuong = req.SoLuong;
-            entity.TrangThai = req.TrangThai;
 
             await _db.UpdateAsync(entity);
 
@@ -165,6 +161,27 @@ namespace Temp_BE.Infrastructure.Persistence.Repositories
 
             entity.SoLuong = (entity.SoLuong ?? 0) - soLuong;
             await _db.UpdateAsync(entity);
+        }
+
+        public async Task<List<SanPhamDto>> GetAllForReportAsync(SanPhamFilterRequest req, CancellationToken ct = default)
+        {
+            var keyword = string.IsNullOrWhiteSpace(req.Keyword) ? null : req.Keyword.Trim();
+            var query =
+                from a in _db.GetAll<SanPhamDb>()
+                where (a.TenSp.RegexpLike(keyword, "i") || a.MaSp.RegexpLike(keyword, "i")).IfGenerateQuery(keyword != null)
+                       && (a.GiaBan >= req.MinPrice!.Value).IfGenerateQuery(req.MinPrice.HasValue)
+                   && (a.GiaBan <= req.MaxPrice!.Value).IfGenerateQuery(req.MaxPrice.HasValue)
+                   && (a.TrangThai == req.TrangThai!.Value).IfGenerateQuery(req.TrangThai.HasValue)
+                select new SanPhamDto
+                {
+                    MaSp = a.MaSp,
+                    TenSp = a.TenSp,
+                    GiaBan = a.GiaBan,
+                    SoLuong = a.SoLuong,
+                    TrangThai = a.TrangThai,
+                };
+
+            return await _db.ToListAsync(query, isMapping: false, ct: ct);
         }
     }
 }

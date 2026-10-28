@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Temp_BE.Application.Interface.Services;
-using Temp_BE.Domain.DTOs;
 using Temp_BE.Domain.Requests;
 
 namespace Temp_BE.Api.Controllers
@@ -9,12 +8,13 @@ namespace Temp_BE.Api.Controllers
     [Route("api/san-pham")]
     public class SanPhamController : BaseApiController
     {
-
         private readonly ISanPhamService _sanPhamService;
+        private readonly IReportService _reportService;
 
-        public SanPhamController(ISanPhamService sanPhamService)
+        public SanPhamController(ISanPhamService sanPhamService, IReportService reportService)
         {
             _sanPhamService = sanPhamService;
+            _reportService = reportService;
         }
 
         [HttpGet]
@@ -30,6 +30,7 @@ namespace Temp_BE.Api.Controllers
             var result = await _sanPhamService.GetByMaSpAsync(maSp);
             return HandleResult(result);
         }
+
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateSanPhamRequest req)
@@ -37,6 +38,7 @@ namespace Temp_BE.Api.Controllers
             var result = await _sanPhamService.CreateAsync(req);
             return HandleResult(result);
         }
+
         [Authorize(Roles = "Admin")]
         [HttpPut("{maSp}")]
         public async Task<IActionResult> Update(string maSp, [FromBody] UpdateSanPhamRequest req)
@@ -44,12 +46,24 @@ namespace Temp_BE.Api.Controllers
             var result = await _sanPhamService.UpdateAsync(maSp, req);
             return HandleResult(result);
         }
+
         [Authorize(Roles = "Admin")]
         [HttpDelete("{maSp}")]
         public async Task<IActionResult> Delete(string maSp)
         {
             var result = await _sanPhamService.DeleteAsync(maSp);
             return HandleResult(result);
+        }
+
+        [HttpGet("export")]
+        public async Task<IActionResult> ExportReport([FromQuery] SanPhamReportRequest req, CancellationToken ct)
+        {
+            var result = await _reportService.ExportSanPhamReportAsync(req, ct);
+
+            if (result.Bytes.Length == 0)
+                return BadRequest(new { message = "Không có dữ liệu sản phẩm để xuất báo cáo." });
+
+            return File(result.Bytes, result.ContentType, result.FileName);
         }
     }
 }

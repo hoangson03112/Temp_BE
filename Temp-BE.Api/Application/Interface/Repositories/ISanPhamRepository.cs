@@ -12,5 +12,6 @@ namespace Temp_BE.Application.Interface.Repositories
         Task<bool> DeleteAsync(string maSp);
         Task<bool> ExistsAsync(string maSp);
         Task DeductStockAsync(string maSp, decimal soLuong);
+        Task<List<SanPhamDto>> GetAllForReportAsync(SanPhamFilterRequest req, CancellationToken ct = default);
     }
 }
